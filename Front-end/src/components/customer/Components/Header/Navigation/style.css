@@ -1,0 +1,100 @@
+.categoryPanel button {
+    text-transform: capitalize !important;
+}
+
+.nav li .submenu {
+    visibility: hidden;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav li .submenu button {
+    font-weight: 400 !important;
+    padding: 8px 12px !important;
+}
+
+.nav li:hover .submenu {
+    opacity: 1 !important;
+    visibility: inherit;
+    top: 100%;
+}
+
+.nav li .submenu li:hover .submenu {
+    top: 0 !important;
+    left: 120% !important;
+    opacity: 0 !important;
+    left: 100%;
+}
+
+.nav li .submenu li .submenu button {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.nav li.submenu li .submenu button:hover {
+    color: rgba(225, 90, 90, 0.7) !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav li button {
+        padding: 6px 8px !important;
+        min-width: auto !important;
+    }
+}
+
+/* Fix text overflow */
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Ensure dropdowns are working correctly */
+@media (max-width: 1024px) {
+    .nav li .submenu {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav li .submenu {
+        min-width: 160px;
+    }
+}
+
+
+.megaMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 260px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 50;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #eee;
+    z-index: 50;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}

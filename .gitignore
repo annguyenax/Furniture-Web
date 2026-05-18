@@ -1,0 +1,28 @@
+# Node modules
+Back-end/node_modules/
+Front-end/node_modules/
+
+# Build output
+Front-end/dist/
+Back-end/dist/
+
+# Docker
+*.env
+docker.env
+
+# SSL (rất quan trọng)
+nginx/ssl/cloudflare.pem
+nginx/ssl/cloudflare.key
+nginx/ssl/
+
+# Logs
+*.log
+logs/
+debug.log
+
+# VSCode
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
