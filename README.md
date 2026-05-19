@@ -377,7 +377,6 @@ Furniture-Web/
 
 **Nguyễn Văn An** — Sinh viên An toàn thông tin, PTIT TP.HCM
 
-Định hướng: Security Engineering | SOC/Blue Team | DevSecOps | AppSec
 
 ---
 
