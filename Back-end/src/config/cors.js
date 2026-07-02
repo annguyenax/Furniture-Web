@@ -9,14 +9,17 @@ const configCORS = (app) => {
     "https://api.noithatstore.site", // BE domain (optional)
     "https://furniture-c1t.pages.dev",
     process.env.CLIENT_URL, // fallback từ env
-  ].filter(Boolean);
+  ]
+    .filter(Boolean)
+    .map((o) => o.trim().replace(/\/$/, ""));
 
   const corsOptions = {
     origin: (origin, callback) => {
       // Allow requests with no origin (mobile apps, curl)
       if (!origin) return callback(null, true);
 
-      if (allowedOrigins.includes(origin)) {
+      const normalizedOrigin = origin.trim().replace(/\/$/, "");
+      if (allowedOrigins.includes(normalizedOrigin)) {
         callback(null, true);
       } else {
         callback(new Error("CORS blocked: " + origin));
